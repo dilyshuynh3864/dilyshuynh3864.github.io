@@ -1,11 +1,43 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>AWS Cloud Practicum - Dilys Huynh</title>
+		<title>Cloud Portfolio - AWS Infrastructure Deployment</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.project-links {
+				display: flex;
+				gap: 15px;
+				margin: 30px 0;
+				flex-wrap: wrap;
+			}
+			.action-btn {
+				display: inline-flex;
+				align-items: center;
+				padding: 12px 24px;
+				background-color: #1e293b;
+				color: #22d3ee !important;
+				border-radius: 6px;
+				font-weight: bold;
+				text-decoration: none;
+				border: 1px solid #334155;
+				transition: all 0.3s ease;
+			}
+			.action-btn:hover {
+				background-color: #22d3ee;
+				color: #0f172a !important;
+				border-color: #22d3ee;
+			}
+			.action-btn i {
+				margin-right: 10px;
+			}
+			.data-table th {
+				background-color: rgba(34, 211, 238, 0.1);
+				color: #22d3ee;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -18,11 +50,11 @@
 				<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">All Projects</a></li>
-							<li class="active"><a href="generic.html">AWS Cloud Practicum</a></li>
+							<li class="active"><a href="generic.html">AWS Infrastructure</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/dilyshuynh3864" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -31,25 +63,91 @@
 						<section class="post">
 								<header class="major">
 									<span class="date">May 2026</span>
-									<h1>AWS Cloud Infrastructure<br />
-									Deployment Practicum</h1>
-									<p>A multi-tier cloud environment architecture deployed within the AWS Learner Lab sandbox, simulating enterprise network isolation, persistent infrastructure provisioning, and edge performance optimization.</p>
+									<h1>Multi-Tier AWS Cloud Infrastructure<br />
+									Deployment & Cost Analysis</h1>
+									<p>Implementation of a secure, scalable, and highly available cloud environment featuring isolated network layers, automated resource provisioning, and decoupled data storage management.</p>
 								</header>
-								<div class="image main"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="AWS Infrastructure" /></div>
+								<div class="image main"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="AWS Infrastructure Presentation" /></div>
 								
-								<h2>Project Core Objective</h2>
-								<p>The goal of this self-directed infrastructure practicum was to transition localized full-stack applications into a resilient, production-ready cloud paradigm. By moving across six distinct engineering milestones (Tasks A through F), I successfully mapped out secure operational networking paths and tackled cloud dependency boundaries.</p>
+								<h2>Project Documentation & Demo</h2>
+								<p>Detailed architectural insights and a live environment walkthrough are available in the technical resources below:</p>
+								<div class="project-links">
+									<a href="YOUR_LINK" target="_blank" class="action-btn">
+										<i class="fas fa-play-circle"></i> Video Demonstration
+									</a>
+									<a href="YOUR_LINK" target="_blank" class="action-btn">
+										<i class="fas fa-file-powerpoint"></i> Technical Slides
+									</a>
+								</div>
+
+								<h2>Technical Objective</h2>
+								<p>The core objective was to design a production-ready infrastructure on Amazon Web Services (AWS) that adheres to the <strong>Well-Architected Framework</strong>. The project focused on ensuring fault tolerance, eliminating single points of failure, and maintaining strict security perimeters between the web layer and the database layer.</p>
 								
-								<h2>Architectural Components Implemented</h2>
+								<h2>Infrastructure Implementation & Output</h2>
+								
+								<h3>1. Network Foundation (VPC Design)</h3>
+								<p>The foundation consists of a custom Virtual Private Cloud (VPC) utilizing a <code>10.0.0.0/16</code> CIDR block. To achieve <strong>High Availability</strong>, resources were distributed across two Availability Zones (AZs) in the <code>us-east-1</code> region. The architecture segments the network into two distinct layers:</p>
 								<ul>
-									<li><strong>Virtual Private Cloud (VPC) Topology:</strong> Created an isolated network space partitioned into deliberate Public Subnets (front-end facing) and Private Subnets (database and processing layers) with specialized Route Tables and Internet Gateways.</li>
-									<li><strong>Secure Compute Provisioning:</strong> Launched and configured AWS EC2 server nodes, mapping inbound traffic boundaries using stateful Security Groups (Virtual Firewalls) restricting access to Ports 80 (HTTP) and 22 (SSH).</li>
-									<li><strong>Data Persistence Layer:</strong> Integrated Amazon Elastic Block Storage (EBS) volumes attached to server nodes to guarantee log and database configuration persistence across continuous delivery lifecycles.</li>
-									<li><strong>Edge Cache Optimization:</strong> Configured Amazon CloudFront distributions to act as a global Content Delivery Network (CDN), solving structural origin routing traps to provide minimal asset delivery latency.</li>
+									<li><strong>Public Subnets:</strong> Hosts the web tier and Internet Gateway (IGW) for client-facing traffic.</li>
+									<li><strong>Private Subnets:</strong> Isolates the data tier from direct internet access, utilizing a <strong>NAT Gateway</strong> for secure outbound communication required for system updates.</li>
 								</ul>
 
-								<h2>Operational Insights & Troubleshooting</h2>
-								<p>During deployment, explicit troubleshooting practices were required to handle network connectivity traps. Initial instances deployed within the subnets faced package resolution errors due to missing route table paths to the Internet Gateway. By auditing the network topology and injecting explicit gateway pointers for external traffic (0.0.0.0/0), environment functionality was fully restored. This hands-on practice built the definitive operational auditing and infrastructure analysis skills required for corporate cloud management.</p>
+								<h3>2. Compute & Security Hardening</h3>
+								<p>The compute layer utilizes Amazon EC2 instances running optimized Linux environments. Output achievements include:</p>
+								<ul>
+									<li><strong>Automated Provisioning:</strong> Implemented <strong>User Data scripts</strong> to automate the installation of dynamic web environments (PHP/Apache) during the launch phase.</li>
+									<li><strong>Security Controls:</strong> Configured stateful Security Groups to enforce strict traffic boundaries: allowing HTTP (Port 80) for web traffic while restricting SSH (Port 22) to administrative IPs.</li>
+									<li><strong>IAM Integration:</strong> Applied <strong>Least Privilege</strong> access by assigning IAM roles to EC2 instances, enabling secure interactions with S3 storage without hardcoded credentials.</li>
+								</ul>
+
+								<h3>3. Managed Data Tier (RDS & S3)</h3>
+								<p>Data persistence and asset management were achieved through managed services to reduce operational overhead:</p>
+								<ul>
+									<li><strong>RDS MySQL:</strong> Deployed a relational database within a private subnet. Communication is restricted to the web tier over <strong>Port 3306</strong>, ensuring the database is hidden from the public internet.</li>
+									<li><strong>S3 Storage:</strong> Provisioned buckets for media hosting and archives. <strong>Versioning</strong> was enabled as a critical output to ensure data integrity and facilitate recovery from accidental deletions.</li>
+								</ul>
+
+								<h2>Financial Audit & Cloud Cost Modeling</h2>
+								<p>A comprehensive cost analysis was conducted using the AWS Pricing Calculator to ensure the architecture remains cost-efficient. By utilizing <code>t3.micro</code> instances and optimizing resource allocation, the infrastructure achieves enterprise-grade performance with minimal overhead.</p>
+								
+								<table class="data-table">
+									<thead>
+										<tr>
+											<th>Infrastructure Component</th>
+											<th>Technical Details</th>
+											<th>Estimated Monthly Cost</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>Compute (EC2)</strong></td>
+											<td>2 Nodes | t3.micro | Application Tier</td>
+											<td>$18.38</td>
+										</tr>
+										<tr>
+											<td><strong>Database (RDS)</strong></td>
+											<td>MySQL | Single-AZ | db.t3.micro</td>
+											<td>$54.86</td>
+										</tr>
+										<tr>
+											<td><strong>Storage (S3)</strong></td>
+											<td>5 GB | Media & Archives | Versioning Enabled</td>
+											<td>$0.13</td>
+										</tr>
+										<tr>
+											<td><strong>Networking</strong></td>
+											<td>4 Subnets | 2 AZs | IGW & NAT Gateway</td>
+											<td>$0.00</td>
+										</tr>
+										<tr>
+											<td colspan="2" style="text-align: right; font-weight: bold; color: #22d3ee;">Total Monthly Expenditure:</td>
+											<td style="font-weight: bold; color: #22d3ee;">$73.37 / mo</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<h2>Key Outcomes</h2>
+								<p>Through this implementation, a fully functional multi-tier environment was delivered. The project successfully demonstrated the ability to bridge connectivity gaps, manage cross-zone failovers, and maintain a highly secure posture for dynamic web applications while keeping the total annual projected cost at approximately <strong>$880 USD</strong>.</p>
 							</section>
 
 					</div>
@@ -57,29 +155,25 @@
 				<footer id="footer">
 						<section class="split contact">
 							<section class="alt">
-								<h3>Address</h3>
+								<h3>Location</h3>
 								<p>Ho Chi Minh City, Vietnam</p>
 							</section>
 							<section>
-								<h3>Phone</h3>
-								<p><a href="tel:+84911369411">(+84) 911-369-411</a></p>
-							</section>
-							<section>
 								<h3>Email</h3>
-								<p><a href="mailto:huynhthanhdung110518@gmail.com">huynhthanhdung110518@gmail.com</a></p>
+								<p><a href="#">huynhthanhdung110518@gmail.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/dilyshuynh3864" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
 						</section>
 					</footer>
 
 				<div id="copyright">
-						<ul><li>&copy; Dilys Huynh</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Cloud Portfolio</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
