@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cloud & Data Portfolio - Data Analytics Case Studies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.data-section { border-bottom: 2px solid #334155; padding: 40px 0; margin-bottom: 20px; }
+			.git-link-btn {
+				display: inline-flex; align-items: center; padding: 10px 20px;
+				background-color: #1e293b; color: #bef264 !important;
+				border-radius: 6px; font-weight: bold; text-decoration: none;
+				border: 1px solid #334155; transition: all 0.3s ease; margin-top: 15px;
+			}
+			.git-link-btn:hover { background-color: #bef264; color: #0f172a !important; }
+			.git-link-btn i { margin-right: 10px; }
+			.query-block { background: #111827; border-left: 4px solid #bef264; padding: 15px; font-family: monospace; color: #e2e8f0; border-radius: 4px; overflow-x: auto; margin: 15px 0; }
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header"><a href="index.html" class="logo">Cloud & Data Portfolio</a></header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">All Projects</a></li>
+					<li class="active"><a href="data-analytics.html">Data Analytics Specs</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<h1>Data Engineering & Exploration<br />
+						Case Studies Spec Sheet</h1>
+						<p>An in-depth review of advanced database optimization, query structures, and statistical processing pipelines implemented to maximize metrics transparency and pipeline execution speeds.</p>
+					</header>
+
+					<div id="sql-cleaning" class="data-section">
+						<h2>1. Enterprise Data Cleaning & Sanitation (SQL)</h2>
+						<p><strong>The Data Problem:</strong> Raw operational data structures frequently suffer from redundant entries, unstructured string elements, and non-standardized field entries. The target was to take raw housing datasets and run robust structural sanitation metrics entirely inside SQL.</p>
+						
+						<p><strong>Technical Actions & Outputs:</strong></p>
+						<ul>
+							<li><strong>Standardizing Formats:</strong> Parsed composite string records and normalized datetimes into unified structured metrics.</li>
+							<li><strong>Breaking Fields:</strong> Utilized substring extractions and <code>PARSENAME</code> mechanics to isolate individual attributes out of multi-layered comma-separated texts.</li>
+							<li><strong>Removing Duplicates:</strong> Engineered analytical window functions (<code>ROW_NUMBER() OVER(PARTITION BY...)</code>) to identify and safely purge duplicate data rows.</li>
+						</ul>
+						<a href="https://github.com/dilyshuynh3864/Data_Cleaning/blob/main/DataCleaning.sql" target="_blank" class="git-link-btn">
+							<i class="fab fa-github"></i> Inspect SQL Cleaning Scripts
+						</a>
+					</div>
+
+					<div id="covid-exploration" class="data-section">
+						<h2>2. Cloud-Based Global Trend Exploration (SQL)</h2>
+						<p><strong>The Data Problem:</strong> Extracting dynamic insight vectors out of continuous, massive global records. This case study focuses on auditing transaction trends and tracking population metrics effectively over millions of global observation metrics.</p>
+						
+						<p><strong>Technical Actions & Outputs:</strong></p>
+						<ul>
+							<li><strong>Multi-Table Joins & Aggegations:</strong> Merged transactional population metrics using advanced JOIN filters to compute compound comparative percentages dynamically.</li>
+							<li><strong>Rolling Window Functions:</strong> Implemented partitions and partition aggregation sums to monitor velocity changes chronologically across historical tracking indices.</li>
+							<li><strong>Subqueries & CTEs:</strong> Optimized query memory profiles by processing nested queries inside <strong>Common Table Expressions (CTEs)</strong> to compute higher-level statistics without storage degradation.</li>
+						</ul>
+						<a href="https://github.com/dilyshuynh3864/Covid19/blob/main/Project1_Covid19.sql" target="_blank" class="git-link-btn">
+							<i class="fab fa-github"></i> Inspect SQL Analytics Code
+						</a>
+					</div>
+
+					<div id="movie-correlation" class="data-section">
+						<h2>3. Strategic Multi-Variable Correlation Analysis (Python)</h2>
+						<p><strong>The Data Problem:</strong> Identifying hidden relationships within data parameters (e.g., determining whether funding allocations directly dictate entertainment revenue outputs) and handling missing numerical indicators in messy files.</p>
+						
+						<p><strong>Technical Actions & Outputs:</strong></p>
+						<ul>
+							<li><strong>Data Preparation via Pandas:</strong> Systematically identified and resolved null values, standardized data types, and parsed unstructured strings.</li>
+							<li><strong>Statistical Heatmaps (Seaborn):</strong> Generated Pearson and Spearman correlation matrices to visualize numerical interactions across thousands of feature blocks.</li>
+							<li><strong>Categorical Factorization:</strong> Factored alphanumeric categorical tags into discrete numeric matrices to map non-numerical features into the final analysis array.</li>
+						</ul>
+						<a href="https://github.com/dilyshuynh3864/Movie_Correlation/blob/main/Movie_Correlation.ipynb" target="_blank" class="git-link-btn">
+							<i class="fab fa-github"></i> Open Jupyter Notebook (.ipynb)
+						</a>
+					</div>
+
+				</section>
+			</div>
+
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt"><h3>Location</h3><p>Ho Chi Minh City, Vietnam</p></section>
+					<section><h3>Email</h3><p><a href="#">huynhthanhdung110518@gmail.com</a></p></section>
+				</section>
+			</footer>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
