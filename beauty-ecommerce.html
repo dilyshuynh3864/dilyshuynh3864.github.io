@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cloud & Data Portfolio - Beauty E-Commerce Platform</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.project-links { display: flex; gap: 15px; margin: 30px 0; flex-wrap: wrap; }
+			.action-btn {
+				display: inline-flex; align-items: center; padding: 12px 24px;
+				background-color: #1e293b; color: #38bdf8 !important;
+				border-radius: 6px; font-weight: bold; text-decoration: none;
+				border: 1px solid #334155; transition: all 0.3s ease;
+			}
+			.action-btn:hover { background-color: #38bdf8; color: #0f172a !important; border-color: #38bdf8; }
+			.action-btn i { margin-right: 10px; }
+			.tech-tag {
+				display: inline-block; background: rgba(56, 189, 248, 0.1);
+				color: #38bdf8; padding: 4px 10px; border-radius: 4px;
+				font-size: 0.85em; font-weight: 600; margin: 0 5px 5px 0;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header">
+				<a href="index.html" class="logo">Cloud & Data Portfolio</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">All Projects</a></li>
+					<li class="active"><a href="beauty-ecommerce.html">E-Commerce Platform</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<span class="date">December 2025</span>
+						<h1>Beauty E-Commerce Platform<br />
+						Architecture & Resilient Engineering</h1>
+						<p>A production-ready full-stack application built with Node.js, Express, and MongoDB, engineering decoupled modular components, stateful authentication mechanisms, and an advanced automated hybrid-storage fallback subsystem.</p>
+					</header>
+					<div class="image main"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200" alt="E-Commerce Architecture Platform" /></div>
+
+					<h2>Project Deliverables & Source Code</h2>
+					<div class="project-links">
+						<a href="https://github.com/dilyshuynh3864/Beauty-E-Commerce.git" target="_blank" class="action-btn">
+							<i class="fab fa-github"></i> Explore GitHub Repository
+						</a>
+					</div>
+
+					<h2>Technical Core Objective</h2>
+					<p>The system was designed to implement an end-to-end, high-performance web storefront utilizing professional software architecture patterns. The core challenge was focused on state management, secure system-to-client resource restriction, and architecting absolute system uptime even during continuous remote database network disconnections.</p>
+
+					<h2>Architectural Implementation & Highlights</h2>
+					
+					<h3>1. Model-View-Controller (MVC) Pattern & Routing</h3>
+					<p>To enforce separation of concerns and clear component boundaries, the application follows a strict <strong>MVC structural pattern</strong>. Express controllers partition complex operations out of the routing layers, grouping e-commerce functional logic into independent modules (Users, Carts, Products, Orders). This enables high code reusability, testing modularity, and smooth scaling pathways.</p>
+
+					<h3>2. Cart Persistence & Secure Order Workflow</h3>
+					<p>The system runs a fully automated, synchronized shopping cart and order processing machine:</p>
+					<ul>
+						<li><strong>Stateful Carts:</strong> User carts are dynamically modified and persistently held to maintain user sessions across platform reloads without visual interface stuttering.</li>
+						<li><strong>Order Pipeline:</strong> Upon checking out, inventory checks are performed, transactions are securely created, and a decoupled automated email transporter service dispatches confirmation metrics to client nodes instantly.</li>
+					</ul>
+
+					<h3>3. Stateful Token Authentication Perimeter</h3>
+					<p>Application routing and resource access are locked down using secure token-based user authentication. The backend handles role-based restriction layers (Guest vs. Customer vs. Platform Admin), parsing cryptographically signed data parameters within request headers to protect API endpoints from unauthorized execution and tampering.</p>
+
+					<h2>Advanced Fault-Tolerance: Automated JSON Fallback</h2>
+					<p>A standout technical achievement of this project is the construction of a custom <strong>Automated Hybrid Storage Fallback System</strong> to combat potential database connection failures.</p>
+					
+					<p>During a scenario where connection to the primary cloud cluster (MongoDB Atlas) drops or suffers high-latency timeouts, the backend automatically diverts operation into a locally maintained fallback matrix. Dynamic transactional updates bypass the cloud connection layer and write directly to localized structured storage files (<code>carts.json</code> and <code>orders.json</code>).</p>
+					
+					<p>Once connectivity is restored, the platform cleanly reconciles state boundaries without service termination or user interruption, achieving a highly resilient, fault-tolerant infrastructure posture.</p>
+				</section>
+			</div>
+
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Location</h3>
+						<p>Ho Chi Minh City, Vietnam</p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="#">huynhthanhdung110518@gmail.com</a></p>
+					</section>
+				</section>
+			</footer>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
