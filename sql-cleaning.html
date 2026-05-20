@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SQL Data Cleaning</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.git-link-btn {
+				display: inline-flex; align-items: center; padding: 10px 20px;
+				background-color: #1e293b; color: #bef264 !important;
+				border-radius: 6px; font-weight: bold; text-decoration: none;
+				border: 1px solid #334155; transition: all 0.3s ease; margin-top: 15px;
+			}
+			.git-link-btn:hover { background-color: #bef264; color: #0f172a !important; }
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header"><a href="index.html" class="logo">Cloud & Data Portfolio</a></header>
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">All Projects</a></li>
+					<li class="active"><a href="sql-cleaning.html">SQL Data Cleaning</a></li>
+				</ul>
+			</nav>
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<span class="date">April 2026</span>
+						<h1>Enterprise Data Cleaning<br />
+						& Sanitation in SQL</h1>
+						<p>Optimizing raw housing infrastructure records to achieve production-grade data integrity using advanced T-SQL manipulation techniques.</p>
+					</header>
+					<div class="image main"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200" alt="SQL Data Cleaning" /></div>
+
+					<h2>The Data Problem</h2>
+					<p>Raw operational database tables frequently contain missing entries, inconsistent datetime formats, unparsed compound address strings, and absolute row duplicates. The objective of this project was to take an unorganized Nashville housing dataset and completely standardize its internal topology using optimized SQL queries before migration.</p>
+					
+					<h2>Technical Actions & Pipeline Highlights</h2>
+					<ul>
+						<li><strong>Format Standardization:</strong> Converted dynamic, messy date fields into consistent, industry-standard SQL Date formats to optimize baseline querying.</li>
+						<li><strong>Property Address Parsing:</strong> Utilized character boundary analysis (<code>SUBSTRING</code>, <code>CHARINDEX</code>) and string parsing (<code>PARSENAME</code>) to cleanly isolate composite text addresses into individual, queryable columns (Address, City, State).</li>
+						<li><strong>Redundancy Elimination:</strong> Engineered partition-based window functions (<code>ROW_NUMBER() OVER (PARTITION BY...)</code>) to dynamically discover and safely purge duplicate data entries without service interruption.</li>
+						<li><strong>Value Transformation:</strong> Standardized chaotic boolean-style fields (replacing mixed 'Y'/'Yes' and 'N'/'No' inputs) using robust <code>CASE WHEN</code> statements.</li>
+					</ul>
+
+					<a href="https://github.com/dilyshuynh3864/Data_Cleaning/blob/main/DataCleaning.sql" target="_blank" class="git-link-btn">
+						<i class="fab fa-github"></i> Inspect Source SQL Scripts
+					</a>
+				</section>
+			</div>
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt"><h3>Location</h3><p>Ho Chi Minh City, Vietnam</p></section>
+					<section><h3>Email</h3><p><a href="mailto:huynhthanhdung110518@gmail.com">huynhthanhdung110518@gmail.com</a></p></section>
+				</section>
+			</footer>
+		</div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
