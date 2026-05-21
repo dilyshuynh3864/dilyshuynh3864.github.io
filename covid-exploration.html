@@ -2,59 +2,109 @@
 <html>
 	<head>
 		<title>COVID-19 Data Exploration</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.git-link-btn {
-				display: inline-flex; align-items: center; padding: 10px 20px;
-				background-color: #1e293b; color: #bef264 !important;
-				border-radius: 6px; font-weight: bold; text-decoration: none;
-				border: 1px solid #334155; transition: all 0.3s ease; margin-top: 15px;
-			}
-			.git-link-btn:hover { background-color: #bef264; color: #0f172a !important; }
-		</style>
+       	<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
 	<body class="is-preload">
 		<div id="wrapper">
-			<header id="header"><a href="index.html" class="logo">Cloud & Data Portfolio</a></header>
+			<header id="header"></header>
+
 			<nav id="nav">
 				<ul class="links">
 					<li><a href="index.html">All Projects</a></li>
-					<li class="active"><a href="covid-exploration.html">COVID-19 Exploration</a></li>
+					<li class="active"><a href="covid-exploration.html">Covid-19 Exploration</a></li>
 				</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/dilyshuynh3864" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
 			</nav>
 			<div id="main">
 				<section class="post">
 					<header class="major">
-						<span class="date">March 2026</span>
-						<h1>COVID-19 Cloud Data Exploration<br />
-						Advanced Querying and Outbreak Metrics</h1>
+						<h1>COVID-19 Analytics <br />
+						& <br> 
+						Advanced SQL Querying</h1>
 						<p>Processing millions of global coronavirus records to compute transmission velocities and dynamic rolling sums.</p>
 					</header>
-					<div class="image main"><img src="https://images.unsplash.com/photo-1584118624012-df056829fba0?q=80&w=1200" alt="COVID-19 Analysis" /></div>
+					
+					<div class="image main"><img src="https://benhvienbaichay.vn/uploads/news/68258f10f375b/covid19.jpg" alt="COVID-19 Analysis" /></div>
+
+					<h2>Core Technologies Implemented</h2>
+                    <div class="tech-badge-group">
+                        <span class="tech-tag">T-SQL (MSSQL)</span>
+                        <span class="tech-tag">Window Functions</span>
+                        <span class="tech-tag">Data Aggregation</span>
+                        <span class="tech-tag">Multi-Table Joins</span>
+                        <span class="tech-tag">Database Views</span>
+                        <span class="tech-tag">Data Type Casting</span>
+                    </div>
 
 					<h2>The Data Problem</h2>
 					<p>Massive global healthcare datasets require significant memory profiles and complex data grouping logic before rendering meaningful insights. The target was to write optimized queries capable of parsing geographic infection growth rates and tracking population vaccination coverage chronologically over millions of raw log entries.</p>
 					
 					<h2>Technical Actions & Query Strategies</h2>
-					<ul>
-						<li><strong>Relational Table Joins:</strong> Aggregated multi-layered statistical datasets by writing optimized <code>JOIN</code> clauses matching historical infection timelines against rolling vaccination tracking arrays.</li>
-						<li><strong>Rolling Sum Windowing:</strong> Engineered analytic partitions (<code>SUM(CAST(...)) OVER (PARTITION BY... ORDER BY...)</code>) to build real-time rolling calculations of global medical treatments.</li>
-						<li><strong>Memory Optimization via CTEs:</strong> Leveraged <strong>Common Table Expressions (CTEs)</strong> and temporary staging tables to store intricate mathematical calculations, reducing core CPU processing cycles.</li>
-						<li><strong>Dynamic View Creation:</strong> Provisioned enterprise data views to store critical trend queries, creating a clean data access layer for downstream visualization tools (Tableau/PowerBI).</li>
-					</ul>
+                    <p>To process event-driven epidemiological records efficiently without straining database storage or memory, the query architecture implemented four optimized manipulation layers:</p>
 
-					<a href="https://github.com/dilyshuynh3864/Covid19/blob/main/Project1_Covid19.sql" target="_blank" class="git-link-btn">
-						<i class="fab fa-github"></i> Inspect SQL Analytics Code
-					</a>
+                    <table class="data-table" style="margin-top: 1rem; margin-bottom: 2rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">SQL Architecture Layer</th>
+                                <th>Algorithmic Mechanism & Query Optimization</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Epidemiological Metrics</strong></td>
+                                <td>Computed active transmission impact and critical severity ratios globally. Formulated math-based derived columns to calculate <code>Death_Percentage</code> (Total Deaths / Total Cases) and population infection penetration dynamically.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Relational Data Merging</strong></td>
+                                <td>Aggregated multi-layered statistical datasets by structuring high-performance <code>JOIN</code> operations, matching chronological infection records (<code>CovidDeaths</code>) against independent demographic arrays (<code>CovidVaccinations</code>) across composite keys (Location, Date).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rolling Sum Windowing</strong></td>
+                                <td>Engineered dynamic data partitions using the window operation <code>SUM(CAST(new_vaccinations as bigint)) OVER (PARTITION BY location ORDER BY location, date)</code>. This calculated the real-time, cumulative progress of regional medical treatments over time.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dynamic View Production</strong></td>
+                                <td>Provisioned automated database views (<code>Percent_Population_Vaccinated</code>) to cache complex mathematical calculations. This established a secure, optimized data access layer tailored for rapid retrieval by visualization engines.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+					<h2>Project Documentation & Source</h2>
+                    <p>The complete, execution-verified SQL scripts and sample database query routines are hosted in the repository below:</p>
+                    <div class="project-links" style="margin-bottom: 2.5rem;">
+                        <a href="https://github.com/dilyshuynh3864/Covid19/blob/main/README.md" target="_blank" class="action-btn">
+                            <i class="fab fa-github"></i> Core GitHub Repository
+                        </a>
+                    </div>
+
+                    <h2>Key Outcomes & Analytics Impact</h2>
+                    <p>The successful optimization of the query pipeline delivered immediate analytical value, shifting heavy processing overhead away from client-side visualization platforms:</p>
+                    <ul>
+                        <li><strong>Server-Side Performance Tuning:</strong> Pushed 100% of the metric calculations (such as dynamic rolling vaccination sums and maximum regional infection counts) down to the database engine level, completely bypassing Excel/flat-file rendering bottlenecks.</li>
+                        <li><strong>Tableau Dashboard Readiness:</strong> Caching the optimized query logic inside a dedicated Database View reduced downstream BI tool load times, preventing time-consuming data recalculations during interactive dashboard filtering.</li>
+                        <li><strong>Macro-To-Micro Telemetry:</strong> Enabled seamless cross-filtering capabilities—allowing stakeholders to effortlessly toggle between global mortality overviews, continent-level summaries, and country-specific infection velocity insights.</li>
+                    </ul>
+
 				</section>
 			</div>
 			<footer id="footer">
 				<section class="split contact">
 					<section class="alt"><h3>Location</h3><p>Ho Chi Minh City, Vietnam</p></section>
 					<section><h3>Email</h3><p><a href="mailto:huynhthanhdung110518@gmail.com">huynhthanhdung110518@gmail.com</a></p></section>
+					<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/dilyshuynh3864" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+					</section>
 				</section>
 			</footer>
 		</div>

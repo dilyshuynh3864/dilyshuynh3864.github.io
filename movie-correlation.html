@@ -2,23 +2,15 @@
 <html>
 	<head>
 		<title>Movie Correlation Analysis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.git-link-btn {
-				display: inline-flex; align-items: center; padding: 10px 20px;
-				background-color: #1e293b; color: #bef264 !important;
-				border-radius: 6px; font-weight: bold; text-decoration: none;
-				border: 1px solid #334155; transition: all 0.3s ease; margin-top: 15px;
-			}
-			.git-link-btn:hover { background-color: #bef264; color: #0f172a !important; }
-		</style>
+       	<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 		<div id="wrapper">
-			<header id="header"><a href="index.html" class="logo">Cloud & Data Portfolio</a></header>
+			<header id="header"></header>
 			<nav id="nav">
 				<ul class="links">
 					<li><a href="index.html">All Projects</a></li>
@@ -28,35 +20,92 @@
 			<div id="main">
 				<section class="post">
 					<header class="major">
-						<span class="date">February 2026</span>
-						<h1>Movie Correlation Analysis<br />
-						Multi-Variable Statistical Mapping</h1>
+						<h1>Movie Correlation<br />
+							& <br>
+						Statistical Mapping</h1>
 						<p>Utilizing the Python scientific computing stack to determine key operational factors affecting entertainment industry revenue trends.</p>
 					</header>
 					<div class="image main"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200" alt="Python Analysis" /></div>
 
+					<h2>Core Technologies Implemented</h2>
+                    <div class="tech-badge-group">
+                        <span class="tech-tag">Python (Pandas/NumPy)</span>
+                        <span class="tech-tag">Seaborn & Matplotlib</span>
+                        <span class="tech-tag">Correlation Matrices</span>
+                        <span class="tech-tag">Data Categorical Encoding</span>
+                        <span class="tech-tag">Outlier Detection</span>
+                        <span class="tech-tag">Regression Analysis</span>
+                    </div>
+
 					<h2>The Data Problem</h2>
 					<p>Identifying revenue-driving attributes in the film industry requires robust mathematical mapping. The focus of this research was to discover whether budget size, public user ratings, or specific production companies hold the highest mathematical correlation with total worldwide gross revenue outputs.</p>
 					
-					<h2>Technical Actions & Exploratory Insights</h2>
-					<ul>
-						<li><strong>Data Ingestion & Cleaning (Pandas):</strong> Audited the data profile to drop incomplete records, cast distorted floating-point columns into integer indicators, and parsed messy text cells to extract production years.</li>
-						<li><strong>Outlier & Distribution Analysis:</strong> Constructed automated scatter plots using <strong>Matplotlib</strong> and <strong>Seaborn</strong> to analyze the interaction patterns between production budget sizes and revenue parameters.</li>
-						<li><strong>Statistical Matrix Mapping:</strong> Executed comprehensive Pearson, Spearman, and Kendall correlation matrices to extract precise multi-variable linear trend directions.</li>
-						<li><strong>Categorical Factorization:</strong> Transformed qualitative parameters (e.g., Company Names, Directors, Genres) into numeric categorical indices to map all features into a unified correlation visualization heatmap.</li>
-					</ul>
+					<h2>Technical Actions & Pipeline Highlights</h2>
+                    <p>To ensure high-fidelity statistical outputs, the project pipeline was architected through four primary data science phases:</p>
 
-					<a href="https://github.com/dilyshuynh3864/Movie_Correlation/blob/main/Movie_Correlation.ipynb" target="_blank" class="git-link-btn">
-						<i class="fab fa-github"></i> Open Jupyter Notebook (.ipynb)
-					</a>
+                    <table class="data-table" style="margin-top: 1rem; margin-bottom: 2rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">Analytics Phase</th>
+                                <th>Methodology & Mathematical Optimization</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Data Wrangling (Pandas)</strong></td>
+                                <td>Audited raw datasets to handle structural gaps. Executed imputation strategies for missing budget/gross entries, cast floating-point artifacts into standardized integer formats, and tokenized temporal data (Production Years).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Outlier & Distribution</strong></td>
+                                <td>Built automated univariate and bivariate scatter visualizers via <strong>Seaborn</strong> to detect non-linear distribution patterns and influence clusters between budget-heavy production models and revenue return rates.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Statistical Correlation</strong></td>
+                                <td>Performed multi-method matrix mapping (Pearson, Spearman, and Kendall coefficients) to extract precise, non-subjective trend directions and validate the strength of variable dependencies.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Categorical Factorization</strong></td>
+                                <td>Transformed high-cardinality qualitative labels (Directors, Genres, Production Companies) into numerical categorical indices. This enabled the inclusion of subjective human factors into a unified linear correlation heatmap.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+					<h2>Project Documentation & Source</h2>
+                    <div class="project-links" style="margin-bottom: 2.5rem;">
+                        <a href="https://github.com/dilyshuynh3864/Movie_Correlation/blob/main/README.md" target="_blank" class="action-btn">
+                            <i class="fab fa-github"></i> Core GitHub Repository
+                        </a>
+                    </div>
+
+					<h2>Key Outcomes & Analytics Impact</h2>
+                    <p>The statistical exploration provided clear empirical evidence regarding what drives financial success in the entertainment sector:</p>
+                    <ul>
+                        <li><strong>Budget-Gross Dependency:</strong> Validated a high-strength linear correlation between initial budget allocation and final revenue, confirming that capital intensity remains the primary predictor of box-office success.</li>
+                        <li><strong>The Power of Audience Sentiment:</strong> Identified that social engagement (Vote Counts) acts as a high-influence multiplier on total gross, suggesting that viral industry traction is as critical as actual production expenditure.</li>
+                        <li><strong>Production Infrastructure:</strong> The numerical transformation of categorical factors revealed specific high-impact production houses that consistently maintain higher revenue-to-budget efficiency ratios across multi-decade trend lines.</li>
+                    </ul>
+					
 				</section>
 			</div>
-			<footer id="footer">
-				<section class="split contact">
-					<section class="alt"><h3>Location</h3><p>Ho Chi Minh City, Vietnam</p></section>
-					<section><h3>Email</h3><p><a href="mailto:huynhthanhdung110518@gmail.com">huynhthanhdung110518@gmail.com</a></p></section>
-				</section>
-			</footer>
+				<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+								<h3>Location</h3>
+								<p>Ho Chi Minh City, Vietnam</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:huynhthanhdung110518@gmail.com">huynhthanhdung110518@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/dilyshuynh3864" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
 		</div>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>

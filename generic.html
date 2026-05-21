@@ -6,46 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.project-links {
-				display: flex;
-				gap: 15px;
-				margin: 30px 0;
-				flex-wrap: wrap;
-			}
-			.action-btn {
-				display: inline-flex;
-				align-items: center;
-				padding: 12px 24px;
-				background-color: #1e293b;
-				color: #22d3ee !important;
-				border-radius: 6px;
-				font-weight: bold;
-				text-decoration: none;
-				border: 1px solid #334155;
-				transition: all 0.3s ease;
-			}
-			.action-btn:hover {
-				background-color: #22d3ee;
-				color: #0f172a !important;
-				border-color: #22d3ee;
-			}
-			.action-btn i {
-				margin-right: 10px;
-			}
-			.data-table th {
-				background-color: rgba(34, 211, 238, 0.1);
-				color: #22d3ee;
-			}
-		</style>
 	</head>
 	<body class="is-preload">
 
 		<div id="wrapper">
 
-				<header id="header">
-						<a href="index.html" class="logo">Cloud & Data Portfolio</a>
-					</header>
+				<header id="header"></header>
 
 				<nav id="nav">
 						<ul class="links">
@@ -53,8 +19,8 @@
 							<li class="active"><a href="generic.html">AWS Infrastructure</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/dilyshuynh3864" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -62,12 +28,25 @@
 
 						<section class="post">
 								<header class="major">
-									<span class="date">May 2026</span>
-									<h1>Multi-Tier AWS Cloud Infrastructure<br />
-									Deployment & Cost Analysis</h1>
+									<h1>AWS Cloud Infrastructure<br />
+										& <br>
+										Cost Analysis
+									</h1>
 									<p>Implementation of a secure, scalable, and highly available cloud environment featuring isolated network layers, automated resource provisioning, and decoupled data storage management.</p>
 								</header>
-								<div class="image main"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="AWS Infrastructure Presentation" /></div>
+
+						<div class="project-gallery" style="margin-bottom: 2.5rem;">
+							<h2>Core Technologies Implemented</h2>
+							<div class="tech-badge-group">
+								<span class="tech-tag">Amazon VPC</span>
+								<span class="tech-tag">Amazon EC2</span>
+								<span class="tech-tag">Amazon RDS (MySQL)</span>
+								<span class="tech-tag">AWS Security Groups</span>
+								<span class="tech-tag">Internet & NAT Gateways</span>
+								<span class="tech-tag">Multi-AZ Architecture</span>
+							</div>
+							
+							
 								
 								<h2>Project Documentation & Demo</h2>
 								<p>Detailed architectural insights and a live environment walkthrough are available in the technical resources below:</p>
@@ -107,6 +86,35 @@
 									<li><strong>S3 Storage:</strong> Provisioned buckets for media hosting and archives. <strong>Versioning</strong> was enabled as a critical output to ensure data integrity and facilitate recovery from accidental deletions.</li>
 								</ul>
 
+								<h2>Production Environment Walkthrough</h2>
+							
+							<div class="gallery-item">
+								<span class="gallery-title">1. Cloud Network Architecture Diagram</span>
+								<img class="gallery-img" src="images/system achitecture.png" alt="AWS Cloud Infrastructure Map" />
+								<p class="gallery-description">
+									Architected a highly available, fault-tolerant Virtual Private Cloud (VPC) isolated across multiple Availability Zones (us-east-1a and us-east-1b). The infrastructure separates public subnets for public-facing web servers from private subnets hosting isolated database instances, tied together securely using an Internet Gateway and proper route management.
+								</p>
+							</div>
+
+							<div class="gallery-item">
+								<span class="gallery-title">2. VPC Subnet Routing & Firewall Gateways</span>
+								<img class="gallery-img" src="images/VPC.png" alt="AWS VPC Management Console" />
+								<img class="gallery-img" src="images/security group inbound.png" alt="AWS Inbound Security Group Rules" style="margin-top: 10px;" />
+								<p class="gallery-description">
+									Configured the core network network using a custom 10.0.0.0/16 IPv4 CIDR block allocation. Network traffic control is tightly restricted via Security Groups (Web_SG), explicitly provisioning stateful firewall entries that limit ingress connectivity strictly to HTTP web requests (Port 80) and secure terminal management via SSH (Port 22).
+								</p>
+							</div>
+
+							<div class="gallery-item">
+								<span class="gallery-title">3. Compute Instances & Decoupled Database Layer</span>
+								<img class="gallery-img" src="images/WebServer EC2.png" alt="AWS EC2 Web Server Provisioning" />
+								<img class="gallery-img" src="images/db-summary.png" alt="Amazon RDS MySQL Database State" style="margin-top: 10px;" />
+								<p class="gallery-description">
+									Provisioned high-performance t3.micro EC2 compute instances running active web server software, map-linked directly to a static Elastic IP for reliable external access. Back-end state persistence is governed by a dedicated Amazon RDS MySQL instance deployed within the secure private subnet perimeter to safeguard core system information.
+								</p>
+							</div>
+						</div>
+
 								<h2>Financial Audit & Cloud Cost Modeling</h2>
 								<p>A comprehensive cost analysis was conducted using the AWS Pricing Calculator to ensure the architecture remains cost-efficient. By utilizing <code>t3.micro</code> instances and optimizing resource allocation, the infrastructure achieves enterprise-grade performance with minimal overhead.</p>
 								
@@ -140,8 +148,8 @@
 											<td>$0.00</td>
 										</tr>
 										<tr>
-											<td colspan="2" style="text-align: right; font-weight: bold; color: #22d3ee;">Total Monthly Expenditure:</td>
-											<td style="font-weight: bold; color: #22d3ee;">$73.37 / mo</td>
+											<td colspan="2" style="text-align: right; font-weight: bold; color: #869f5c;">Total Monthly Expenditure:</td>
+											<td style="font-weight: bold; color: #869f5c;">$73.37 / mo</td>
 										</tr>
 									</tbody>
 								</table>
@@ -160,21 +168,17 @@
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">huynhthanhdung110518@gmail.com</a></p>
+								<p><a href="mailto:huynhthanhdung110518@gmail.com">huynhthanhdung110518@gmail.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/dilyshuynh3864" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
 						</section>
 					</footer>
-
-				<div id="copyright">
-						<ul><li>&copy; Cloud Portfolio</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
 
 			</div>
 

@@ -3281,215 +3281,140 @@ input, select, textarea {
 
 		}
 
-/* Intro */
+/* ==========================================================================
+   INTRO RÚT GỌN - GIỮ NGUYÊN CHUYỂN ĐỘNG & KÉO LÊN CAO
+   ========================================================================== */
+#intro {
+    color: #ffffff;
+    position: relative;
+    cursor: default;
+    text-align: center;
+    z-index: 1;
+    
+    /* Giữ nguyên toàn bộ thuộc tính chuyển động (Transition) mượt mà ban đầu */
+    -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+    -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+    -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
 
-	#intro {
-		color: #ffffff;
-		padding: 8rem 4rem 6rem 4rem ;
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-justify-content: -moz-flex-end;
-		-webkit-justify-content: -webkit-flex-end;
-		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
-		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
-		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-		transition: opacity 1s ease, transform 1s ease;
-		position: relative;
-		cursor: default;
-		text-align: center;
-		z-index: 1;
-		min-height: 100vh;
-	}
+    /* Giữ nguyên cấu trúc căn chỉnh Flexbox trên mọi trình duyệt */
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    
+    /* ĐỔI THÀNH CENTER: Để chữ nằm cân đối ở giữa khung hình mới thay vì bị đẩy xuống đáy */
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    
+    padding: 1.5rem 3rem 4rem 3rem !important;
+    min-height: 60vh !important;
+    max-height: 65vh !important;
+}
 
-		#intro input, #intro select, #intro textarea {
-			color: #ffffff;
-		}
+    #intro h1, #intro p, #intro strong, #intro b, #intro a { color: #ffffff; }
+    #intro a { border-bottom-color: rgba(255, 255, 255, 0.5); }
+    #intro a:hover { border-bottom-color: transparent; color: #18bfef !important; }
 
-		#intro a {
-			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
-		}
+    #intro h1 {
+        font-size: 4.2rem !important;
+        line-height: 1;
+        margin-bottom: 1.2rem !important;
+    }
 
-			#intro a:hover {
-				border-bottom-color: transparent;
-				color: #18bfef !important;
-			}
+    #intro p {
+        font-size: 1.2rem;
+        font-style: italic;
+		max-width: 1100px;
+    }
 
-		#intro strong, #intro b {
-			color: #ffffff;
-		}
+#nav {
+    margin-top: 0 !important;
+}
 
-		#intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
-			color: #ffffff;
-		}
+#intro + #header {
+    margin-top: -20rem;
+}
+#intro + #header .logo {
+    -moz-transform: translateY(2rem);
+    -webkit-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
+    transform: translateY(2rem);
+    opacity: 0;
+    visibility: hidden;
+}
 
-		#intro blockquote {
-			border-left-color: #ffffff;
-		}
+#intro.hidden {
+    pointer-events: none;
+    -moz-transform: translateY(2rem);
+    -webkit-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
+    transform: translateY(2rem);
+    -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
+    -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s;
+    -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+#intro.hidden + #header .logo {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
 
-		#intro code {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-		}
+body.is-preload #intro {
+    -moz-transform: translateY(2rem);
+    -webkit-transform: translateY(2rem);
+    -ms-transform: translateY(2rem);
+    transform: translateY(2rem);
+    opacity: 0;
+}
+body.is-preload #intro:not(.hidden) + #header + #nav {
+    -moz-transform: translateY(4rem);
+    -webkit-transform: translateY(4rem);
+    -ms-transform: translateY(4rem);
+    transform: translateY(4rem);
+    opacity: 0;
+}
 
-		#intro hr {
-			border-bottom-color: #ffffff;
-		}
+/* ==========================================================================
+   RESPONSIVE (MOBILE & TABLET) - GIỮ NGUYÊN HIỆU ỨNG TỐI ƯU CHIỀU CAO
+   ========================================================================== */
+@media screen and (max-width: 980px) {
+    #intro {
+        padding: 2rem 4rem !important;
+        min-height: 55vh !important; /* Co ngắn chiều cao trên máy tính bảng */
+    }
+    #intro p br { display: none; }
+    #intro + #header { margin-top: -14rem; }
+}
 
-		#intro input[type="submit"],
-		#intro input[type="reset"],
-		#intro input[type="button"],
-		#intro button,
-		#intro .button {
-			background-color: transparent;
-			box-shadow: inset 0 0 0 2px #ffffff;
-			color: #ffffff !important;
-		}
-
-			#intro input[type="submit"]:hover,
-			#intro input[type="reset"]:hover,
-			#intro input[type="button"]:hover,
-			#intro button:hover,
-			#intro .button:hover {
-				box-shadow: inset 0 0 0 2px #18bfef;
-				color: #18bfef !important;
-			}
-
-			#intro input[type="submit"].primary,
-			#intro input[type="reset"].primary,
-			#intro input[type="button"].primary,
-			#intro button.primary,
-			#intro .button.primary {
-				background-color: #ffffff;
-				box-shadow: none;
-				color: #1e252d !important;
-			}
-
-				#intro input[type="submit"].primary:hover,
-				#intro input[type="reset"].primary:hover,
-				#intro input[type="button"].primary:hover,
-				#intro button.primary:hover,
-				#intro .button.primary:hover {
-					background-color: #18bfef;
-				}
-
-		#intro h1 {
-			font-size: 5rem;
-			line-height: 1;
-		}
-
-		#intro p {
-			font-size: 1.25rem;
-			font-style: italic;
-			margin-top: -0.25rem;
-			text-align: center;
-		}
-
-		#intro + #header {
-			margin-top: -20rem;
-		}
-
-			#intro + #header .logo {
-				-moz-transform: translateY(2rem);
-				-webkit-transform: translateY(2rem);
-				-ms-transform: translateY(2rem);
-				transform: translateY(2rem);
-				opacity: 0;
-				visibility: hidden;
-			}
-
-		#intro.hidden {
-			pointer-events: none;
-			-moz-transform: translateY(2rem);
-			-webkit-transform: translateY(2rem);
-			-ms-transform: translateY(2rem);
-			transform: translateY(2rem);
-			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
-			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s;
-			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
-			transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
-			opacity: 0;
-			visibility: hidden;
-		}
-
-			#intro.hidden + #header .logo {
-				-moz-transform: translateY(0);
-				-webkit-transform: translateY(0);
-				-ms-transform: translateY(0);
-				transform: translateY(0);
-				opacity: 1;
-				visibility: visible;
-			}
-
-		body.is-preload #intro {
-			-moz-transform: translateY(2rem);
-			-webkit-transform: translateY(2rem);
-			-ms-transform: translateY(2rem);
-			transform: translateY(2rem);
-			opacity: 0;
-		}
-
-			body.is-preload #intro:not(.hidden) + #header + #nav {
-				-moz-transform: translateY(4rem);
-				-webkit-transform: translateY(4rem);
-				-ms-transform: translateY(4rem);
-				transform: translateY(4rem);
-				opacity: 0;
-			}
-
-		@media screen and (max-width: 980px) {
-
-			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
-			}
-
-				#intro p br {
-					display: none;
-				}
-
-				#intro + #header {
-					margin-top: -14rem;
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
-			}
-
-				#intro h1 {
-					font-size: 3.25rem;
-					line-height: 1.1;
-					margin-bottom: 1rem;
-				}
-
-				#intro p {
-					font-size: 1rem;
-					margin-top: 0rem;
-				}
-
-				#intro .actions {
-					display: none;
-				}
-
-		}
-
+@media screen and (max-width: 736px) {
+    #intro {
+        padding: 2rem 2rem 1rem 2rem !important;
+        min-height: 50vh !important; /* Co ngắn chiều cao trên điện thoại */
+    }
+    #intro h1 {
+        font-size: 2.8rem !important;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    #intro p { font-size: 0.95rem; margin-top: 0rem; }
+}
 /* Header */
 
 	#header {
@@ -3515,8 +3440,8 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 20rem;
-		padding-bottom: 8rem;
+		height: 8rem;
+		padding: 2rem 0;
 		position: relative;
 		text-align: center;
 		z-index: 2;
@@ -4687,3 +4612,222 @@ input, select, textarea {
 		}
 
 	}
+
+/* ==========================================================================
+   PORTFOLIO DESIGN SYSTEM SYNC (Index, ML, E-Commerce)
+   ========================================================================== */
+
+/* 1. Project Links & Action Buttons Container */
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+/* 2. Global Synchronized Action Button */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #1e293b;
+    color: #bef264 !important;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.action-btn:hover {
+    background-color: #bef264;
+    color: #0f172a !important;
+    border-color: #bef264;
+}
+
+.action-btn i {
+    margin-right: 10px;
+}
+
+/* 3. Technology Badges Alignment */
+.tech-badge-group {
+    margin: 20px 0;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: rgba(190, 242, 100, 0.1);
+    color: #869f5c;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(190, 242, 100, 0.2);
+}
+
+/* ==========================================================================
+   4. RESPONSIVE GRID & CARD MATRIX LAYOUT (ĐÃ ĐỒNG BỘ TOÀN DIỆN)
+   ========================================================================== */
+.results-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+    align-items: stretch;
+}
+
+.result-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.result-card h3 {
+    color: #f8fafc;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    min-height: 2.6em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.result-card h3 + p {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.result-card p {
+    color: #cbd5e1;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.result-card code {
+    display: block;
+    background: rgba(15, 23, 42, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85em;
+    margin-top: 12px;
+    border: 1px solid rgba(190, 242, 100, 0.2);
+    word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 5. Enterprise Architecture System Sub-lists */
+.architecture-list {
+    background: rgba(217, 222, 228, 0.861);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 25px 0;
+}
+
+.architecture-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.architecture-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   PROJECT IMAGE GALLERY SYSTEM (ENGLISH TRANSLATION & FLEX SYNC)
+   ========================================================================== */
+
+.project-gallery {
+    margin-bottom: 3rem;
+}
+
+.gallery-item {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    margin-bottom: 2rem; /* Khoảng cách giữa các khối */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery-item .gallery-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #f8fafc;
+    margin-bottom: 16px;
+}
+
+.gallery-item .gallery-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    display: block;
+}
+
+.gallery-item .gallery-description {
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 0;
+    width: 100%; 
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        padding: 20px;
+    }
+    .gallery-item .gallery-img {
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+}
+
+#intro {
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+#intro.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+header.major p {
+    font-style: normal !important;
+}
