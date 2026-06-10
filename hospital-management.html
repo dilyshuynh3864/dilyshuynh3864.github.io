@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Clinical Fairness Audit & Resource Governance</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+
+    <body class="is-preload">
+        <div id="wrapper">
+            <header id="header"></header>
+
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">All Projects</a></li>
+                    <li class="active"><a href="hospital-management.html">Clinical Analytics</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/dilyshuynh3864" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </nav>
+
+            <div id="main">
+                <section class="post">
+                    <header class="major">
+                        <h1>Clinical Fairness Audit &<br />
+                        Resource Governance Engine</h1>
+                        <p>An end-to-end data analytics platform designed to audit algorithmic bias in clinical readmission workflows and mine multi-drug co-prescription drivers impacting hospital capacity footprints.</p>
+                    </header>
+                    
+                <div class="project-gallery" style="margin-bottom: 2.5rem;">
+                    <h2>Core Technologies Implemented</h2>
+                    <div class="tech-badge-group">
+                        <span class="tech-tag">XGBoost Classifier</span>
+                        <span class="tech-tag">Fairlearn Framework</span>
+                        <span class="tech-tag">Apriori Engine (Mlxtend)</span>
+                        <span class="tech-tag">Type-II ANOVA & Tukey HSD</span>
+                        <span class="tech-tag">Streamlit Dashboard</span>
+                    </div>
+
+                    <h2>Individual Ownership: Machine Learning Audit & Statistical Modeling</h2>
+                    <p>While contributing to the team's unified historical data pipeline structures and infrastructure configurations, my core standalone engineering ownership focused entirely on designing the platform's algorithmic governance and clinical inference modules.</p>
+                    
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h3>Task 1: Interaction Shift Auditing</h3>
+                            <p>Fitted an OLS interaction model and Type-II ANOVA to analyze resource metrics. Mathematically proved that while disease complexity dictates procedure volumes ($F = 249.74$), structural demographic resource gaps remain parallel ($p = 0.089$) and do not compound as a patient worsens.</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Task 2a: Cost-Sensitive Optimization</h3>
+                            <p>Engineered an operational early-readmission classifier utilizing native tree-splitting categorical optimizations in XGBoost, specifically designed to counter extreme minority class scarcity where acute readmissions represent only ~9.59% of records.</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Task 2b: Fairlearn Mitigation Suite</h3>
+                            <p>Audited risk arrays across progressive class-weight penalties ($X1$ to $X10$). Calibrated an optimized $X7$ penalty weight with a $\ge 0.45$ decision boundary to compress gender False Negative Rate Disparity ($\Delta FNR$) safely down to <strong>5.88%</strong>.</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Task 3: Market Basket & LOS Analytics</h3>
+                            <p>Deployed the Apriori algorithm to mine transactional co-prescription matrices. Linked extracted drug rules to hospital Length of Stay (LOS) distributions, deploying Post-Hoc Tukey HSD testing to isolate drug pairings driving capacity bottlenecks.</p>
+                        </div>
+                    </div>
+
+                    <h2>Shared Platform Architectural Modules (Team Contribution)</h2>
+                    <p>To support the core analytical governance pipelines, the team engineered the surrounding data management systems and reporting infrastructure:</p>
+                    <ul class="architecture-list">
+                        <li><strong>Unified Historical Ingestion:</strong> Built standard ETL modules to compile clinical trackers into clean, structured data targets while dropping high-variance unclassified data records.</li>
+                        <li><strong>EHR Discharge Pipeline:</strong> Configured backend environment variables to pass incoming transactional patient vectors directly into prediction arrays without logging sensitive criteria.</li>
+                        <li><strong>Governance Telemetry Monitor:</strong> Deployed reporting dashboards displaying real-time selection rates, demographic accuracy breakdowns, and rolling false-negative evaluation tables.</li>
+                        <li><strong>Responsive Admin Viewports:</strong> Structured clean, scannable data visualization blocks and interaction interfaces for data auditing teams and medical administrators.</li>
+                    </ul>
+
+                    <h2>Project Documentation & Demo</h2>
+                    <p>Detailed analytical insights and structural code implementations are available in the technical resources below:</p>
+                    <div class="project-links">
+                        <a href="https://github.com/dilyshuynh3864/Hospital-Management/blob/main/README.md" target="_blank" class="action-btn">
+                            <i class="fas fa-file-alt"></i> Core GitHub Repository
+                        </a>
+                        <a href="https://dilyshuynh3864-hospital-management-app-ej4yxo.streamlit.app/" target="_blank" class="action-btn">
+                            <i class="fas fa-code-branch"></i> Streamlit App
+                        </a>
+                    </div>
+
+                    <h2>Problem Statement & Solutions</h2>
+                    <p>Modern clinical prediction tools risk mirroring historical systemic disparities if deployed without governance. Furthermore, operational class imbalances cause traditional machine learning classifiers to under-detect high-risk patient readmissions, while administrative teams lack clear visibility into how complex polypharmacy drug combinations drive hospital <strong>Length of Stay (LOS)</strong> capacity drops.</p>
+                    
+                    <p>To solve this, our team developed a dual-pipeline engine: a <strong>Clinical Fairness Layer</strong> that utilizes blind model training and cost-sensitive calibration to minimize systemic subgroup variance, and a <strong>Resource Optimization Layer</strong> that transforms chemical distribution paths into transactional datasets to map hospital resource consumption metrics.</p>
+
+                    <h2>System Architecture & Engineering</h2>
+                    
+                    <h3>1. Cost-Sensitive XGBoost & Fairlearn Auditing</h3>
+                    <p>Instead of relying on standard balanced frameworks, incoming features are cast directly into categorical indices. Models are trained blindly without access to sensitive group labels. The pipeline monitors predictive balance by evaluating outputs across moving penalty weight factors to find an optimal equilibrium point:</p>
+                    <ul class="architecture-list">
+                        <li><strong>Disparity Compression:</strong> Safely brought the False Negative Rate gap ($\Delta FNR$) down under the 10% international standard line.</li>
+                        <li><strong>Staff Alert Management:</strong> Maintained an operational selection rate rolling between 30.6% and 36.7% to shield clinical personnel from predictive alert fatigue.</li>
+                        <li><strong>Discharge Safeguard:</strong> Calibrated decision boundaries to flag at-risk readmissions before resource allocation occurs.</li>
+                    </ul>
+
+                    <h3>2. Co-Prescription Market Basket & Inferential Modeling</h3>
+                    <p>To isolate how drug combinations impact physical bed availability, active medication records were processed as distinct clinical transaction vectors. The system mines frequent itemsets across a 1% support baseline and checks relationship ties using strict association filters (Lift $\ge 1.2$):</p>
+                    
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h3>Transaction Encoder <br>(Step 1)</h3>
+                            <p>Transforms raw multi-row prescription records into a sparse boolean matrix, isolating active changes ('Steady', 'Up', 'Down') across 23 target diabetes compounds.</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Apriori Processing <br>(Step 2)</h3>
+                            <p>Extracts frequent itemsets and maps co-occurrence laws to bypass minor clinical noise and focus purely on highly repetitive treatment phacodos.</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Parametric Pairwise Suite <br>(Step 3)</h3>
+                            <p>Runs a global One-Way ANOVA followed by Post-Hoc Tukey HSD tests to control family-wise error rates and flag pairs that cause distinct hospital stay extensions.</p>
+                        </div>
+                    </div>
+
+                    <h3>3. Production Integration & EHR Asset Packaging</h3>
+                    <p>When a patient enters a discharge loop, the host application channels their real-time clinical feature vector directly to the serialized model runtime. The engine uses packaged artifacts (<code>final_model.pkl</code>, <code>label_encoder.pkl</code>, and <code>cat_mapping.pkl</code>) to execute rapid inference, ensuring instant operational response times without requiring external runtime recompilations.</p>
+
+                    <h2>Production Environment Walkthrough</h2>
+
+                    <div class="gallery-item">
+                        <span class="gallery-title">1. Fairlearn Strategic Subgroup Disparity Log (Pipeline 1)</span>
+                        <img class="gallery-img" src="images/fairlearn_audit_summary.csv" style="display:none;" alt="Fairlearn Subgroup Audit Log Table" />
+                        <div class="mock-table-container" style="background: #272822; color: #f8f8f2; padding: 15px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; margin-top: 10px;">
+                            Gender Cohort | Accuracy | Precision | Selection Rate | False Negative Rate (FNR)<br />
+                            Female (0)    | 0.624104 | 0.121212  | 0.367220       | 0.544402<br />
+                            Male (1)      | 0.674334 | 0.121697  | 0.306283       | 0.603175
+                        </div>
+                        <p class="gallery-description" style="margin-top: 10px;">
+                            The post-calibration performance output tracking predictive equity across demographic cuts. By optimizing class weights to $X7$, the residual error rate disparity between cohorts settles at a balanced 5.88%.
+                        </p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <span class="gallery-title">2. Length of Stay (LOS) Resource Variance Visualizations (Pipeline 2)</span>
+                        <p class="gallery-description">
+                            A seaborn-generated parametric bar graph tracking clinical stay footprints against top discovered medication phacodos. Features 95% statistical confidence intervals mapped to evaluate the macro capacity pressures of polypharmacy.
+                        </p>
+                    </div>
+                </div>
+
+                <h2>System Limitations & Future Roadmap</h2>
+                    <p>Demonstrating modern engineering maturity requires identifying current pipeline boundaries and detailing actionable infrastructure optimization paths:</p>
+                    <ul>
+                        <li><strong>Current Architectural Limits:</strong> The platform processes demographic bias checks post-hoc rather than integrating real-time in-flight regularizers, and statistical validations depend on cold, historical dataset updates.</li>
+                        <li><strong>Future Optimization Roadmap:</strong> Integrate Fairlearn grid-search reduction algorithms directly into the active training loop, build dynamic data hooks for real-time streaming updates, and expand the market basket engine to monitor broader comorbidity interaction rules.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <footer id="footer">
+                <section class="split contact">
+                    <section class="alt">
+                        <h3>Location</h3>
+                        <p>Ho Chi Minh City, Vietnam</p>
+                    </section>
+                    <section>
+                        <h3>Email</h3>
+                        <p><a href="mailto:huynhthanhdung110518@gmail.com">huynhthanhdung110518@gmail.com</a></p>
+                    </section>
+                    <section>
+                        <h3>Social</h3>
+                        <ul class="icons alt">
+                            <li><a href="https://www.linkedin.com/in/dilys-huynh-9078ba243/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/dilyshuynh3864" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
